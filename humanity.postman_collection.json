@@ -1,0 +1,468 @@
+{
+	"info": {
+		"_postman_id": "ad87d811-90fe-4df3-b205-c0645a15a42d",
+		"name": "humanity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19769284",
+		"_collection_link": "https://crimson-spaceship-556826.postman.co/workspace/New-Team-Workspace~c2450568-cca1-4023-9abe-1fdda209ff44/collection/19769284-ad87d811-90fe-4df3-b205-c0645a15a42d?action=share&source=collection_link&creator=19769284"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n         \"name\" : \"RAdwan Moahmed\",\r\n         \"email\" : \"rmm@gmail.com\",\r\n         \"password\" : \"123\",\r\n         \"phone\" : \"01223740125\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"rmm@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin function",
+			"item": [
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "3d02c2fa9a32da2c2fc065a00b23af95",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/usersget",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"usersget"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "3d02c2fa9a32da2c2fc065a00b23af95",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n         \"name\" : \"sh Moahmed\",\r\n         \"email\" : \"rmm@gmail.com\",\r\n         \"phone\" : \"01223740125\",\r\n         \"status\":\"admin\"\r\n}        ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/usersupdate/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"usersupdate",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "3d02c2fa9a32da2c2fc065a00b23af95",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/userdelete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"userdelete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "create posts",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "3d02c2fa9a32da2c2fc065a00b23af95",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"name\": \"name\",\r\n      \"description\": \"description\",\r\n      \"pic_url\" :\"pic\" ,\r\n      \"amountOfBudget\":\"44\",\r\n      \"allBudget\":\"4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/createpost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"createpost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update post",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "3d02c2fa9a32da2c2fc065a00b23af95",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"name\": \"mmmmommm\",\r\n      \"description\": \"description\",\r\n      \"pic_url\" :\"pic\" ,\r\n      \"amountOfBudget\":\"44\",\r\n      \"allBudget\":\"4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/updatepost/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"updatepost",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/getposts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"getposts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/deletepost/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"deletepost",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "forms",
+			"item": [
+				{
+					"name": "create form",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "3d02c2fa9a32da2c2fc065a00b23af95",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"name\": \"name\",\r\n      \"description\": \"description\",\r\n      \"budget\":\"200\",\r\n      \"type\":\"volunteer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/createform",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"createform"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get forms of poor",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "3d02c2fa9a32da2c2fc065a00b23af95",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/getpoorforms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"getpoorforms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get acceptefforms",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "3d02c2fa9a32da2c2fc065a00b23af95",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/acceprtedformsget",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"acceprtedformsget"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get forms of volunteer",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "3d02c2fa9a32da2c2fc065a00b23af95",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/getvolunteerforms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"getvolunteerforms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user history",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "3d02c2fa9a32da2c2fc065a00b23af95",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/userhistory/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"userhistory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reject forms",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "3d02c2fa9a32da2c2fc065a00b23af95",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/rejectform/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"rejectform",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "accept form",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "3d02c2fa9a32da2c2fc065a00b23af95",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/acceptform/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"acceptform",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
